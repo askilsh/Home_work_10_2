@@ -11,7 +11,8 @@ public class Main {
         BoysList.BOYS.stream().
                 filter(boy -> boy.getAge() > AGE).
                 map(Boy::getName).
-                distinct().sorted().
+                distinct().
+                sorted().
                 limit(LIM).
                 collect(Collectors.toMap((x -> x),
                         (x -> BoysList.BOYS.stream().
